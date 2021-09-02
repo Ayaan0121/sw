@@ -1,0 +1,79 @@
+ 
+<html>
+  <head>
+    <title>Image recognition</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap links-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <!--Machine learning library-->
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <!--Web Camera library-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+   <link rel="stylesheet" href="style.css">
+
+   <link rel="shortcut icon" type="image/png" href="Untitled.png">
+  
+  </head>
+
+  <body>
+  <div class="container">
+    
+    <center>
+
+     <h3 class="btn btn-default heading btn-info">Image Recognition</h3>
+
+      <br><br>
+
+      <p style="font-size: 22px;">Model is trained to identify the following objects (<a href="https://jackstromberg.com/letters-numbers-encoder-decoder/">decode</a> them): </p>
+
+      <b class="name_of_objects">
+        13 5 7 1 2 12 21 5 16 1 19 19
+
+      <hr>
+      13 5 7 1 18 5 4 16 1 19 19
+ 
+      <hr>
+      22 5 14 21 19 16 1 19 19
+      <hr>
+      13 1 18 19 16 1 19 19
+
+      <hr>
+      </b>    
+
+      <label>Webcam View - </label>
+<br><br>
+
+      <div id="camera"></div>
+
+      <br><br>
+
+      <div id="result"></div>
+
+      <br><br>
+<span>
+      <button id="b1" onclick="take_snapshot()" class="btn btn-success">Capture Image</button>
+
+      <audio id="music" src="ad.mp3"></audio>
+      <audio id="music2" src="sci-fi-voiceclip-628-sound-effect-58483887.mp3"></audio>
+      <button id="b2" onclick="check()" class="btn btn-danger">Indentify Image</button>
+    </span>
+
+      <br><br>
+
+      <p style="font-size: 22px;">Object : <span id="result_object_name"></span> </p>
+      <p style="font-size: 22px;">Accuracy : <span id="result_object_accuracy"></span> </p>
+      <br><br>
+<button id="ad" class="btn btn-info" style="visibility: hidden;" onclick="navigate()">Continue</button>
+<br>
+    </center>
+
+  </div>
+<script src="main.js"></script>
+
+  </body>
+</html>
+
+ 
